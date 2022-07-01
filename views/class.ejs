@@ -1,0 +1,27 @@
+<%- include('../partials/header'); -%>
+<a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+	<a-assets>
+		<img id="drums" src="./images/drums.png">
+		<img id="guitar" src="./images/guitar.png">
+		<img id="mic" src="./images/mic.png">
+		<img id="piano" src="./images/piano.png">
+	</a-assets>
+
+	<a-marker class="ar-marker" id="drums-marker" type='barcode' value='0'>
+		<a-image src="#drums" rotation="90 0 0"></a-image>
+	</a-marker>
+	<a-marker class="ar-marker" id="guitar-marker" type='barcode' value='1'>
+		<a-image src="#guitar" rotation="90 0 0"></a-image>
+	</a-marker>
+	<a-marker class="ar-marker" id="mic-marker" type='barcode' value='2'>
+		<a-image src="#mic" rotation="90 0 0"></a-image>
+	</a-marker>
+	<a-marker class="ar-marker" id="piano-marker" type='barcode' value='3'>
+		<a-image src="#piano" rotation="90 0 0"></a-image>
+	</a-marker>
+
+	<!-- add a simple camera -->
+	<a-entity camera></a-entity>
+</a-scene>
+
+<%- include('../partials/footer'); -%>
